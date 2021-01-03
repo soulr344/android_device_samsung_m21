@@ -5,3 +5,6 @@ on late-init
     setprop sys.usb.configfs 1
 
 on boot
+    symlink /dev/block/platform/13520000.ufs/by-name /dev/block/by-name	
+    chown root system /dev/block/by-name	
+    chmod 0666 /dev/block/by-name
