@@ -8,6 +8,8 @@ on early-init
 
     start ueventd	
 
+    write /sys/fs/selinux/enforce 0
+
     setprop sys.usb.configfs 1	
 
 on init	
