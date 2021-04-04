@@ -47,8 +47,6 @@ on init
 
     write /proc/sys/kernel/panic_on_oops 1	
     write /proc/sys/vm/max_map_count 1000000	
- #to cut charging battery path	
-    write /sys/class/power_supply/battery/siop_level 0	
 
     start watchdogd	
 
@@ -127,12 +125,12 @@ on fs && property:sys.usb.configfs=1
 
 on fs	
 #@RECOVERY [For reboot reason.	
-    symlink /dev/block/platform/13520000.ufs/by-name/param /dev/block/param	
+    symlink /dev/block/by-name/param /dev/block/param	
     chown root system /dev/block/param	
     chmod 0666 /dev/block/param	
-    symlink /dev/block/platform/13520000.ufs/by-name /dev/block/by-name	
-    chown root system /dev/block/by-name	
-    chmod 0666 /dev/block/by-name	
+    symlink /dev/block/by-name /dev/block/platform/13520000.ufs/by-name
+    chown root system  /dev/block/platform/13520000.ufs/by-name
+    chmod 0666  /dev/block/platform/13520000.ufs/by-name
 #]	
 
     mkdir /dev/usb-ffs 0775 shell shell	
