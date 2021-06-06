@@ -1,6 +1,6 @@
 # Platform
 PLATFORM_VERSION := 11
-DEVICE_PATH := device/samsung/m21nsxx
+DEVICE_PATH := device/samsung/m21
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_BOARD_PLATFORM_GPU := mali-g72
