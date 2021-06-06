@@ -1,4 +1,5 @@
 # Platform
+PLATFORM_VERSION := 11
 DEVICE_PATH := device/samsung/m21nsxx
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
