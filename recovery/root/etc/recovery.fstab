@@ -4,10 +4,10 @@
 #
 # Use normal mounting because we can, and if we can, we do
 
-/system_root       ext4    /dev/block/mapper/system     flags=display="System";wipeingui
-/vendor            ext4    /dev/block/mapper/vendor     flags=display="Vendor";wipeingui
-/product           ext4    /dev/block/mapper/product    flags=display="Product";
-/odm               ext4    /dev/block/mapper/odm        flags=display="Odm";
+/system_root       ext4    /dev/block/mapper/system     flags=display="System";wipeingui;forcerw;
+/vendor            ext4    /dev/block/mapper/vendor     flags=display="Vendor";wipeingui;forcerw;
+/product           ext4    /dev/block/mapper/product    flags=display="Product";forcerw;
+/odm               ext4    /dev/block/mapper/odm        flags=display="Odm";forcerw;
 
 /system_image       emmc    /dev/block/mapper/system    flags=backup=1;flashimg;display="System Image"
 /vendor_image       emmc    /dev/block/mapper/vendor    flags=backup=1;flashimg;display="Vendor Image"

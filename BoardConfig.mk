@@ -70,17 +70,6 @@ PLATFORM_SECURITY_PATCH := 2021-06-01
 BOARD_KERNEL_IMAGE_NAME := Image
 
 # Dynamic Partition handling flags
-
-# Makes twrp ignore "unable to update logical partition" error
-IGNORE_UPDATE_LOGICAL_PARTITION_ERROR := true
-
 # lets the dynamic partitions be wipable/resizable in twrp > wipe
 ALLOW_LOGICAL_PARTITION_WIPE := true
-
-# these dynamic partitions will get mounted as rw
-BOARD_RW_DYNAMIC_PARTITIONS_LIST := \
-    system \
-    vendor \
-    product \
-    odm
 
